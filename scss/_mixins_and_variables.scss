@@ -1,0 +1,45 @@
+@mixin flex_jc_ai($justify_content, $align_items) {
+    display: flex;
+    justify-content: $justify_content;
+    align-items: $align_items;
+}
+
+@mixin text_main_big {
+    color:#F8F8F8;
+    font-family: Unbounded;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+@mixin text_header_contacts_title {
+    color: #FFF;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 19.2px */
+    opacity: 0.5;
+}
+
+@mixin text_header_contacts_text {
+    color: #FFF;
+    font-variant-numeric: lining-nums proportional-nums;
+    font-family: Raleway;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 19.2px */
+}
+
+$main_background_color: #101010;
+
+body {
+    margin: 0px;
+    background: $main_background_color;
+}
+

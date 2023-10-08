@@ -1,0 +1,16 @@
+@import "mixins_and_variables";
+
+body {
+    margin: 0px;
+    background: $main_background_color;
+    @include flex_jc_ai(space-between, stretch);
+}
+
+.side_empty_section {
+    width: auto;
+}
+
+.main_section {
+    max-width: 1440px;
+    width: 100%;
+}
