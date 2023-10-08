@@ -71,6 +71,14 @@ body {
   display: block;
 }
 
+.catalog_block_second:hover .catalog_block_link {
+  display: block;
+}
+
+.catalog_block_third:hover .catalog_block_link {
+  display: block;
+}
+
 .catalog_block_link {
   display: none;
   margin: 0px 20px 20px 0px;
