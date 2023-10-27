@@ -1,0 +1,57 @@
+@import "mixins_and_variables";
+
+.header {
+    @include flex_jc_ai(space-between, flex-start);
+    padding: 0px 100px; 
+    background: $main_background_color;
+    max-width: 1080px;
+    margin: 0px auto;
+}
+
+.header_logo {
+    @include flex_jc_ai(flex-start, center);
+    margin: 23px 0px 0px;
+    text-decoration: none;
+}
+
+.header_logo_title {
+    @include text_header_contacts_title;
+    display: flex;
+    width: 137px;
+    height: 61px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    margin: 0px 0px 0px 16.41px;
+}
+
+.header_contacts {
+    @include flex_jc_ai(flex-end, flex-start);
+    margin: 56px 0px 0px;
+}
+
+.header_contacts_coop {
+    margin: 0px 40px 0px 0px
+}
+
+.header_contacts_coop_title {
+    @include text_header_contacts_title;
+    margin: 0px 0px 12px;
+}
+
+.header_contacts_coop_text{
+    @include text_header_contacts_text;
+    margin: 0px;
+    text-decoration: none;
+}
+
+.header_contacts_support_title{
+    @include text_header_contacts_title;
+    margin: 0px 0px 12px;
+}
+
+.header_contacts_support_text{
+    @include text_header_contacts_text;
+    margin: 0px;
+    text-decoration: none;
+}

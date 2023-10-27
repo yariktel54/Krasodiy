@@ -3,7 +3,7 @@
 body {
     margin: 0px;
     background: $main_background_color;
-    @include flex_jc_ai(space-between, stretch);
+    @include flex_jc_ai(center, stretch);
 }
 
 .side_empty_section {
@@ -11,6 +11,6 @@ body {
 }
 
 .main_section {
-    max-width: 1440px;
     width: 100%;
+    overflow: hidden;
 }
