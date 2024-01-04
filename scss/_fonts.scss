@@ -1,0 +1,83 @@
+@mixin font_ttf_woff_eot($ffamily, $flink, $fstyle, $fweight) {
+    @font-face {
+        font-family: $ffamily;
+        src: url(str-insert(str-insert($flink, "../", 1), ".woff", str-length(str-insert($flink, "1234", 1)))) format("woff"),
+             url(str-insert(str-insert($flink, "../", 1), ".ttf", str-length(str-insert($flink, "1234", 1)))) format("truetype"),
+             url(str-insert(str-insert($flink, "../", 1), ".eot", str-length(str-insert($flink, "1234", 1)))) format("embedded-opentype");
+        font-style: $fstyle;
+        font-weight: $fweight;
+        font-feature-settings: 'lnum' 1;
+    }
+}
+
+@mixin font_ttf($ffamily, $flink, $fstyle, $fweight) {
+    @font-face {
+        font-family: $ffamily;
+        src: url(str-insert(str-insert($flink, "../", 1), ".ttf", str-length(str-insert($flink, "1234", 1)))) format("truetype");
+        font-style: $fstyle;
+        font-weight: $fweight;
+        font-feature-settings: 'lnum' 1;
+    }
+}
+
+
+// @include font_ttf_woff_eot(Raleway, fonts/Raleway-Black, normal, normal);
+
+// @include font_ttf_woff_eot(Raleway, fonts/Raleway-BlackItalic, italic, normal);
+
+
+@include font_ttf_woff_eot(Raleway, fonts/Raleway-Regular, normal, normal);
+
+@include font_ttf_woff_eot(Raleway, fonts/Raleway-Italic, italic, normal);
+
+
+@include font_ttf_woff_eot(Raleway, fonts/Raleway-Bold, normal, bold);
+
+@include font_ttf_woff_eot(Raleway, fonts/Raleway-BoldItalic, italic, bold);
+
+
+@include font_ttf_woff_eot(Raleway, fonts/Raleway-ExtraBold, normal, 800);
+
+@include font_ttf_woff_eot(Raleway, fonts/Raleway-ExtraBoldItalic, italic, 800);
+
+
+@include font_ttf_woff_eot(Raleway, fonts/Raleway-ExtraLight, normal, 200);
+
+@include font_ttf_woff_eot(Raleway, fonts/Raleway-ExtraLightItalic, italic, 200);
+
+
+@include font_ttf_woff_eot(Raleway, fonts/Raleway-Light, normal, 300);
+
+@include font_ttf_woff_eot(Raleway, fonts/Raleway-LightItalic, italic, 300);
+
+
+@include font_ttf_woff_eot(Raleway, fonts/Raleway-Medium, normal, 500);
+
+@include font_ttf_woff_eot(Raleway, fonts/Raleway-MediumItalic, italic, 500);
+
+
+@include font_ttf_woff_eot(Raleway, fonts/Raleway-SemiBold, normal, 600);
+
+@include font_ttf_woff_eot(Raleway, fonts/Raleway-SemiBoldItalic, italic, 600);
+
+
+@include font_ttf_woff_eot(Raleway, fonts/Raleway-Thin, normal, 100);
+
+@include font_ttf_woff_eot(Raleway, fonts/Raleway-ThinItalic, italic, 100);
+
+
+@include font_ttf(Unbounded, fonts/Unbounded-Black, normal, normal);
+
+@include font_ttf(Unbounded, fonts/Unbounded-Bold, normal, bold);
+
+@include font_ttf(Unbounded, fonts/Unbounded-ExtraBold, normal, 800);
+
+@include font_ttf(Unbounded, fonts/Unbounded-ExtraLight, normal, 200);
+
+@include font_ttf(Unbounded, fonts/Unbounded-Light, normal, 300);
+
+@include font_ttf(Unbounded, fonts/Unbounded-Medium, normal, 500);
+
+@include font_ttf(Unbounded, fonts/Unbounded-Regular, normal, normal);
+
+@include font_ttf(Unbounded, fonts/Unbounded-SemiBold, normal, 600);

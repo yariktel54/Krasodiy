@@ -1,13 +1,16 @@
 @import "mixins_and_variables";
+@import "header_type_one";
+@import "fonts";
+@import "styles";
 
-main {
+.main {
     max-width: 1280px;
     width: 100%;
     margin: 0px auto;
 }
 
 .main_text_title {
-    @include text_main_big;
+    @include some_text(#F8F8F8, Unbounded, 40px, normal, 600, normal, 2px, 1, uppercase, none);
     margin: 74px 0px 40px 0px;
     text-align: center;
 }
@@ -22,33 +25,18 @@ main {
 }
 
 .catalog_block_first {
-    background-image: url(../img/me.PNG);
-    background-size: cover;
-    background-position: center;
-    aspect-ratio: 32/35;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    @include catalog_block_type_one(img/me, cover, center, "32", "35");  
+    @include flex(flex-end, flex-end);  
 }
 
 .catalog_block_second {
-    background-image: url(../img/me.PNG);
-    background-size: cover;
-    background-position: center;
-    aspect-ratio: 32/35;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    @include catalog_block_type_one(img/me, cover, center, "32", "35");  
+    @include flex(flex-end, flex-end);  
 }
 
 .catalog_block_third {
-    background-image: url(../img/me.PNG);
-    background-size: cover;
-    background-position: center;
-    aspect-ratio: 32/35;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    @include catalog_block_type_one(img/me, cover, center, "32", "35");  
+    @include flex(flex-end, flex-end);  
 }
 
 
@@ -85,7 +73,7 @@ main {
 
 
 .insta_block {
-    @include flex_jc_ai(space-between, stretch);  
+    @include flex(space-between, stretch);  
     position: relative;
     // overflow: hidden;
 }
@@ -96,43 +84,27 @@ main {
 }
 
 .title_text_insta_block {
-    @include text_main_big;
+    @include some_text(#F8F8F8, Unbounded, 40px, normal, 600, normal, 2px, 1, uppercase, none);
     margin: 0px 0px 40px;
     width: 375px
 }
 
+
 .bttn_text_insta_block {
-    text-decoration: none;
-    @include flex_jc_ai(center, center);
-    padding: 12px 20px;
-    border-radius: 8px;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), 
-    linear-gradient(272deg, rgba(0, 0, 0, 0.10) 0%, rgba(255, 255, 255, 0.03) 100%);
-    gap: 10px;
-    width: 168px;
+    @include flex(center, center);
+    @include bttn_type_one(168px);
 }
 
 .text_bttn_text_insta_block {
-    color: #FFF;
-    font-family: Unbounded;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 140%; /* 19.6px */
-    letter-spacing: 0.7px;
+    @include some_text(#FFF, Unbounded, 14px, normal, 400, 140%, 0.7px, 1, none, none);
     margin: 0px;
 }
 
+
+
 .trade_mark_all_rights_reserved {
+    @include some_text(#FFF, Raleway, 16px, normal, 400, 160%, normal, 0.5, none, none);
     margin: 53px 0px 0px 0px;
-    color: #FFF;
-    font-variant-numeric: lining-nums proportional-nums;
-    font-family: Raleway;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 160%; /* 25.6px */
-    opacity: 0.5;
 }
 
 
@@ -143,25 +115,19 @@ main {
     position: relative;
 }
 
+
 .mosaic_column {
     width: 100%;
 }
 
 .mosaic_gray_block {
-    width: 146.108px;
-    height: 146.108px;
-    flex-shrink: 0;
-    background-color: #252527;
-    content: " ";
+    @include mosaic(#252527, 146.108px, 146.108px);
 }
 
 .mosaic_black_block {
-    width: 146.108px;
-    height: 146.108px;
-    flex-shrink: 0;
-    background-color: transparent;
-    content: " ";
+    @include mosaic(transparent, 146.108px, 146.108px);
 }
+
 
 
 .pen_imges_insta_block {
@@ -173,37 +139,13 @@ main {
 }
 
 .first_insta_imges_insta_block {
-    border-radius: 16px;
-    position: absolute;
-    bottom: -124.21px;
-    left: 39px;
-    transform: rotate(-9.85deg);
-    // width: 211.121px;
-    // height: 330.976px;
-    width: 16.49382813vw;
-    max-width: 211.121px;
+    @include insta_img(16px, auto, auto, -124.21px, 39px, -9.85deg, 16.49382813vw, 211.121px);
 }
 
 .second_insta_imges_insta_block {
-    border-radius: 16px;
-    position: absolute;
-    top: 27.72px;
-    right: 151.21px;
-    transform: rotate(6.794deg);
-    // width: 211.121px;
-    // height: 330.976px;
-    width: 16.49382813vw;
-    max-width: 211.121px;
+    @include insta_img(16px, 27.72px, 151.21px, auto, auto, 6.794deg, 16.49382813vw, 211.121px);
 }
 
 .third_insta_imges_insta_block {
-    border-radius: 16px;
-    position: absolute;
-    top: 36.2px;
-    right: -80px;
-    transform: rotate(-14.19deg);
-    // width: 211.121px;
-    // height: 330.976px;
-    width: 16.49382813vw;
-    max-width: 211.121px;
+    @include insta_img(16px, 36.2px, -80px, auto, auto, -14.19deg, 16.49382813vw, 211.121px);
 }

@@ -1,0 +1,12 @@
+@import "mixins_and_variables";
+
+body {
+    margin: 0px;
+    background: $main_background_color;
+    @include flex(center, stretch);
+}
+
+.main_section {
+    width: 100%;
+    overflow: hidden;
+}

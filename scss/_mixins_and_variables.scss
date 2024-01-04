@@ -1,45 +1,74 @@
-@mixin flex_jc_ai($justify_content, $align_items) {
+@mixin flex($jc, $ai) {
     display: flex;
-    justify-content: $justify_content;
-    align-items: $align_items;
+    justify-content: $jc;
+    align-items: $ai;
 }
 
-@mixin text_main_big {
-    color:#F8F8F8;
-    font-family: Unbounded;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+@mixin catalog_block_type_one($url, $bs, $bp, $apf, $aps) {
+    background-image: url(str-insert(str-insert($url, "../", 1), ".png", str-length(str-insert($url, "1234", 1))));
+    background-size: $bs;
+    background-position: $bp;
+    aspect-ratio: unquote(str-insert(str-insert($apf, "/", str-length($apf)+1), $aps, str-length(str-insert($apf, "/", str-length($apf)))+1));
 }
 
-@mixin text_header_contacts_title {
-    color: #FFF;
+@mixin some_text($clr, $ff, $fsz, $fs, $fw, $lh, $ls, $op, $tt, $td) {
+    color: $clr;
     font-variant-numeric: lining-nums proportional-nums;
-    font-family: Raleway;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 120%; /* 19.2px */
-    opacity: 0.5;
+    font-family: $ff;
+    font-size: $fsz;
+    font-style: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+    letter-spacing: $ls;
+    opacity: $op;
+    text-transform: $tt;
+    text-decoration: $td;
 }
 
-@mixin text_header_contacts_text {
-    color: #FFF;
-    font-variant-numeric: lining-nums proportional-nums;
-    font-family: Raleway;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 120%; /* 19.2px */
+@mixin bttn_type_one($wb) {
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.20) 100%), 
+    linear-gradient(272deg, rgba(0, 0, 0, 0.10) 0%, rgba(255, 255, 255, 0.03) 100%);
+    gap: 10px;
+    width: $wb;
+}
+
+@mixin bttn_type_two($wb) {
+    display: inline-flex;
+    padding: 16px 28px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.80);
+    background: linear-gradient(272deg, rgba(0, 0, 0, 0.10) 0%, rgba(255, 255, 255, 0.03) 100%);
+    width: $wb;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+@mixin mosaic($bc, $w, $h) {
+    width: $w;
+    height: $h;
+    flex-shrink: 0;
+    background-color: $bc;
+    content: " ";
+}
+
+@mixin insta_img($br, $t, $r, $b, $l, $tr, $w, $mw) {
+    border-radius: $br;
+    position: absolute;
+    top: $t;
+    right: $r;
+    bottom: $b;
+    left: $l;
+    transform: rotate($tr);
+    width: $w;
+    max-width: $mw;
 }
 
 $main_background_color: #101010;
 
-body {
-    margin: 0px;
-    background: $main_background_color;
-}
 
